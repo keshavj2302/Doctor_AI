@@ -96,10 +96,8 @@ clf.fit(X, Y)
 
 disease_drug = pd.read_csv('Drug_Data.csv')
 
-# disease_drug = disease_drug.drop(columns = ['Drug_Review', 'User_Rating', 'Date', 'Count_of_Reviews'])
-disease_drug = disease_drug.iloc[:, :2]
-disease_drug = disease_drug.rename(columns = {'drug_name': 'drugName', 'medical_condition': 'Prescribed_for'})
-# disease_drug.head(20)
+disease_drug = disease_drug.drop(columns = ['Drug_Review', 'User_Rating', 'Date', 'Count_of_Reviews'])
+
 prescription = {}
 
 for index, each_row in disease_drug.iterrows():
