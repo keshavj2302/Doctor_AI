@@ -94,10 +94,11 @@ clf.fit(X, Y)
 ###### Drugs Prediction from disease   ###########
 ##################################################
 
-disease_drug = pd.read_csv('Drug_Data.csv')
+disease_drug = pd.read_csv('Drug_Data.zip')
 
 disease_drug = disease_drug.drop(columns = ['Drug_Review', 'User_Rating', 'Date', 'Count_of_Reviews'])
 
+# print(disease_drug.head(20))
 prescription = {}
 
 for index, each_row in disease_drug.iterrows():
@@ -111,7 +112,7 @@ for index, each_row in disease_drug.iterrows():
         prescription[each_row['Prescribed_for']] = presc_array
         
     
-
+# print(prescription)
 
 
 
